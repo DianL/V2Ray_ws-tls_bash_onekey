@@ -433,7 +433,7 @@ ssl_install() {
  #    else
  #        ${INS} install socat netcat -y
  #    fi
-    judge "安装 SSL 证书生成脚本依赖"
+    # judge "安装 SSL 证书生成脚本依赖"
 
     curl https://get.acme.sh | sh
     judge "安装 SSL 证书生成脚本"
