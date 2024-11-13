@@ -426,13 +426,13 @@ nginx_install() {
 }
 
 ssl_install() {
-    if [[ "${ID}" == "centos" ]]; then
-        ${INS} install socat nc -y
-	elif [[ "${ID}" == "debian" && ${VERSION_ID} -ge 12 ]]; then
-		${INS} install socat netcat-openbsd -y
-    else
-        ${INS} install socat netcat -y
-    fi
+ #    if [[ "${ID}" == "centos" ]]; then
+ #        ${INS} install socat nc -y
+	# elif [[ "${ID}" == "debian" && ${VERSION_ID} -ge 12 ]]; then
+	# 	${INS} install socat netcat-openbsd -y
+ #    else
+ #        ${INS} install socat netcat -y
+ #    fi
     judge "安装 SSL 证书生成脚本依赖"
 
     curl https://get.acme.sh | sh
